@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockPro - Stock Management</title>
+    <link rel="stylesheet" href="./Stock Pro CSS/Design.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body>
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="welcome-container">
+        <!-- Animated Background Elements -->
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+        </div>
+        
+        <!-- Particles Animation -->
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <header class="welcome-header">
+            <div class="logo">
+                <i data-feather="package"></i>
+                <h1>StockPro</h1>
+            </div>
+            <nav>
+                <button class="btn-outline" id="loginBtn">Sign In</button>
+                <button class="btn-primary" id="signupBtn">Sign Up</button>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <!-- Hero Illustration -->
+            <div class="hero-illustration">
+                <div class="dashboard-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="mockup-content">
+                        <div class="chart-preview">
+                            <div class="chart-bar" style="height: 60%"></div>
+                            <div class="chart-bar" style="height: 80%"></div>
+                            <div class="chart-bar" style="height: 45%"></div>
+                            <div class="chart-bar" style="height: 90%"></div>
+                            <div class="chart-bar" style="height: 70%"></div>
+                        </div>
+                        <div class="stats-preview">
+                            <div class="stat-item">
+                                <div class="stat-icon"></div>
+                                <div class="stat-text"></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon"></div>
+                                <div class="stat-text"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Floating Icons -->
+                <div class="floating-icons">
+                    <div class="floating-icon icon-1">
+                        <i data-feather="package"></i>
+                    </div>
+                    <div class="floating-icon icon-2">
+                        <i data-feather="trending-up"></i>
+                    </div>
+                    <div class="floating-icon icon-3">
+                        <i data-feather="bar-chart-2"></i>
+                    </div>
+                    <div class="floating-icon icon-4">
+                        <i data-feather="shield"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-content">
+                <h2>Simple and powerful <span class="highlight">inventory management</span></h2>
+                <p>Track your products, monitor stock levels, and visualize your data with charts - all stored locally in your browser.</p>
+                
+                <!-- Features Highlights -->
+                <div class="hero-features">
+                    <div class="feature-highlight">
+                        <div class="feature-icon-small">
+                            <i data-feather="database"></i>
+                        </div>
+                        <div class="feature-text">
+                            <span class="feature-title">Local Storage</span>
+                            <span class="feature-desc">Your data stays private</span>
+                        </div>
+                    </div>
+                    <div class="feature-highlight">
+                        <div class="feature-icon-small">
+                            <i data-feather="users"></i>
+                        </div>
+                        <div class="feature-text">
+                            <span class="feature-title">Multi-User</span>
+                            <span class="feature-desc">Login system included</span>
+                        </div>
+                    </div>
+                    <div class="feature-highlight">
+                        <div class="feature-icon-small">
+                            <i data-feather="download"></i>
+                        </div>
+                        <div class="feature-text">
+                            <span class="feature-title">CSV Export</span>
+                            <span class="feature-desc">Export your data</span>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </section>
+
+        <section class="features">
+            <h3>Why choose StockPro?</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <i data-feather="bar-chart-2"></i>
+                    </div>
+                    <h4>Interactive Dashboards</h4>
+                    <p>Visualize your data with modern charts</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon orange">
+                        <i data-feather="alert-triangle"></i>
+                    </div>
+                    <h4>Smart Alerts</h4>
+                    <p>Notifications for low and critical stock levels</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <i data-feather="download"></i>
+                    </div>
+                    <h4>Data Export</h4>
+                    <p>Export your reports in CSV format</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Business Solutions Section -->
+        <section class="business-solutions">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Everything your business needs</h2>
+                    <p class="section-subtitle">From inventory tracking to analytics, StockPro grows with your business</p>
+                </div>
+                
+                <div class="features-showcase">
+                    <!-- Analytics Feature -->
+                    <div class="feature-card">
+                        <div class="feature-visual">
+                            <div class="modern-mockup analytics">
+                                <div class="mockup-header">
+                                    <div class="header-dots">
+                                        <span class="dot red"></span>
+                                        <span class="dot yellow"></span>
+                                        <span class="dot green"></span>
+                                    </div>
+                                    <div class="header-title">Analytics Dashboard</div>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="stats-grid">
+                                        <div class="stat-card">
+                                            <div class="stat-icon">📦</div>
+                                            <div class="stat-info">
+                                                <span class="stat-number">1,247</span>
+                                                <span class="stat-label">Total Items</span>
+                                            </div>
+                                        </div>
+                                        <div class="stat-card">
+                                            <div class="stat-icon">⚠️</div>
+                                            <div class="stat-info">
+                                                <span class="stat-number">23</span>
+                                                <span class="stat-label">Low Stock</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chart-container">
+                                        <div class="chart-title">Weekly Performance</div>
+                                        <div class="modern-chart">
+                                            <div class="chart-line">
+                                                <div class="line-point" style="left: 10%; bottom: 30%"></div>
+                                                <div class="line-point" style="left: 25%; bottom: 45%"></div>
+                                                <div class="line-point" style="left: 40%; bottom: 60%"></div>
+                                                <div class="line-point" style="left: 55%; bottom: 40%"></div>
+                                                <div class="line-point" style="left: 70%; bottom: 75%"></div>
+                                                <div class="line-point" style="left: 85%; bottom: 65%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <div class="feature-badge">Analytics</div>
+                            <h3>Real-time Analytics</h3>
+                            <p>Track your inventory performance with detailed insights and forecasting tools that help you make data-driven decisions.</p>
+                            <div class="feature-highlights">
+                                <div class="highlight-item">
+                                    <i data-feather="trending-up"></i>
+                                    <span>Live inventory tracking</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i data-feather="bar-chart-2"></i>
+                                    <span>Sales forecasting</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i data-feather="target"></i>
+                                    <span>Performance metrics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Notifications Feature -->
+                    <div class="feature-card reverse">
+                        <div class="feature-visual">
+                            <div class="modern-mockup notifications">
+                                <div class="mockup-header">
+                                    <div class="header-dots">
+                                        <span class="dot red"></span>
+                                        <span class="dot yellow"></span>
+                                        <span class="dot green"></span>
+                                    </div>
+                                    <div class="header-title">Smart Alerts</div>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="alert-item urgent">
+                                        <div class="alert-icon">🔴</div>
+                                        <div class="alert-content">
+                                            <div class="alert-title">Critical Stock Alert</div>
+                                            <div class="alert-desc">iPhone Cases - Only 3 units left</div>
+                                            <div class="alert-time">2 minutes ago</div>
+                                        </div>
+                                        <div class="alert-action">Reorder</div>
+                                    </div>
+                                    <div class="alert-item success">
+                                        <div class="alert-icon">✅</div>
+                                        <div class="alert-content">
+                                            <div class="alert-title">Restock Completed</div>
+                                            <div class="alert-desc">Laptops - Added 50 new units</div>
+                                            <div class="alert-time">1 hour ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="alert-item info">
+                                        <div class="alert-icon">📊</div>
+                                        <div class="alert-content">
+                                            <div class="alert-title">Weekly Report Ready</div>
+                                            <div class="alert-desc">Performance summary available</div>
+                                            <div class="alert-time">3 hours ago</div>
+                                        </div>
+                                        <div class="alert-action">View</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <div class="feature-badge">Automation</div>
+                            <h3>Smart Notifications</h3>
+                            <p>Never run out of stock again with intelligent alerts and automated reordering that keeps your business running smoothly.</p>
+                            <ul class="feature-list">
+                                <li><i data-feather="check"></i> Low stock alerts</li>
+                                <li><i data-feather="check"></i> Automated reordering</li>
+                                <li><i data-feather="check"></i> Custom thresholds</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interactive Gallery Section -->
+        <section class="interactive-gallery">
+            <div class="container">
+                <h2>See StockPro in Action</h2>
+                <p class="section-subtitle">Real inventory management scenarios and powerful features</p>
+                
+                <div class="gallery-grid">
+
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Dashboard interface with charts" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Dashboards</h3>
+                                    <p>Visualize your inventory data simply</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="https://cdn-icons-png.flaticon.com/512/724/724933.png" alt="Download export icon" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Data Export</h3>
+                                    <p>Export your reports in CSV format</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png" alt="Warning alert icon" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Stock Alerts</h3>
+                                    <p>Notifications for low and critical stock levels</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Warehouse inventory management" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Stock Management</h3>
+                                    <p>Track and manage your products easily</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="innovation-showcase">
+            <div class="container">
+                <div class="showcase-grid">
+                    <div class="showcase-content">
+                        <h2>Built for the Future</h2>
+                        <p>StockPro combines cutting-edge technology with intuitive design to deliver an unparalleled inventory management experience.</p>
+                        
+                        <div class="innovation-features">
+                            <div class="innovation-item">
+                                <div class="innovation-icon">
+                                    <i data-feather="plus-circle"></i>
+                                </div>
+                                <div class="innovation-text">
+                                    <h4>Product Management</h4>
+                                    <p>Add, edit, and delete products with ease</p>
+                                </div>
+                            </div>
+                            
+                            <div class="innovation-item">
+                                <div class="innovation-icon">
+                                    <i data-feather="pie-chart"></i>
+                                </div>
+                                <div class="innovation-text">
+                                    <h4>Visual Charts</h4>
+                                    <p>Category, stock levels, and trend charts</p>
+                                </div>
+                            </div>
+                            
+                            <div class="innovation-item">
+                                <div class="innovation-icon">
+                                    <i data-feather="history"></i>
+                                </div>
+                                <div class="innovation-text">
+                                    <h4>Action History</h4>
+                                    <p>Track all changes with detailed history</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to optimize your inventory?</h2>
+                    <p>Join thousands of businesses already using StockPro to streamline their operations.</p>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboardPage" class="dashboard-container" style="display: none;">
+        <header class="dashboard-header">
+            <h1><i data-feather="package"></i> <span id="dashboardTitle">StockPro</span></h1>
+            <div class="header-info">
+                <span id="companyWelcome">Dashboard</span>
+            </div>
+            <div class="header-actions">
+                <button class="btn-primary" id="addProductBtn">
+                    <i data-feather="plus"></i>
+                    Add Product
+                </button>
+                <button class="btn-secondary" id="exportCsvBtn">
+                    <i data-feather="download"></i> Export CSV
+                </button>
+                <button class="btn-secondary" id="importCsvBtn">
+                    <i data-feather="upload"></i> Import CSV
+                </button>
+                <input type="file" id="csvFileInput" accept=".csv" style="display:none;" />
+                <button class="btn-secondary" id="settingsBtn">
+                    <i data-feather="settings"></i>
+                    Settings
+                </button>
+                <button class="btn-outline" id="logoutBtn">
+                    <i data-feather="log-out"></i> Log Out
+                </button>
+                <select id="currencySelect">
+                    <option value="€">€ Euro</option>
+                    <option value="$">$ Dollar</option>
+                    <option value="£">£ Pound</option>
+                    <option value="CFA">CFA</option>
+                </select>
+            </div>
+        </header>
+
+        <section class="summary-cards">
+            <div class="card">
+                <div class="card-icon blue">
+                    <i data-feather="package"></i>
+                </div>
+                <div class="card-content">
+                    <h3 id="totalProducts">0</h3>
+                    <p>Total Products</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon orange">
+                    <i data-feather="alert-triangle"></i>
+                </div>
+                <div class="card-content">
+                    <h3 id="criticalStock">0</h3>
+                    <p>Critical Stock</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon red">
+                    <i data-feather="trending-down"></i>
+                </div>
+                <div class="card-content">
+                    <h3 id="lowStockItems">0</h3>
+                    <p>Low Stock</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon gray">
+                    <i data-feather="grid"></i>
+                </div>
+                <div class="card-content">
+                    <h3 id="totalCategories">0</h3>
+                    <p>Categories</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="charts-section">
+            <div class="chart-container">
+                <div class="chart-card">
+                    <h3>Distribution by Category</h3>
+                    <canvas id="categoryChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div class="chart-card">
+                    <h3>Stock Levels</h3>
+                    <canvas id="stockChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div class="chart-card">
+                    <h3>Stock Status</h3>
+                    <canvas id="stockStatusChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div class="chart-card">
+                    <h3>Stock Evolution</h3>
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="controls-section">
+            <div class="search-container">
+                <i data-feather="search"></i>
+                <input type="text" id="searchInput" placeholder="Search products...">
+            </div>
+            <div class="filter-container">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                </select>
+                <select id="stockFilter">
+                    <option value="">All Levels</option>
+                    <option value="critical">Critical (≤5)</option>
+                    <option value="low">Low (≤20)</option>
+                    <option value="normal">Normal (>20)</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <div class="table-container">
+                <table class="products-table">
+                    <thead>
+                        <tr>
+                            <th class="sortable" data-sort="name">
+                                Name <i data-feather="chevron-up"></i>
+                            </th>
+                            <th class="sortable" data-sort="category">
+                                Category <i data-feather="chevron-up"></i>
+                            </th>
+                            <th class="sortable" data-sort="quantity">
+                                Quantity <i data-feather="chevron-up"></i>
+                            </th>
+                            <th class="sortable" data-sort="price">
+                                Price <i data-feather="chevron-up"></i>
+                            </th>
+                            <th>Stock Level</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productsTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section Historique -->
+        <section class="history-section">
+            <div class="history-card">
+                <h3>Action History</h3>
+                <button class="btn-outline" id="clearHistoryBtn" style="margin-bottom:15px;">Clear History</button>
+                <ul id="historyList" class="history-list"></ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Settings Page -->
+    <div id="settingsPage" class="settings-container" style="display: none;">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button class="back-btn" id="backToDashboard">
+                    <i data-feather="arrow-left"></i>
+                    Back
+                </button>
+            </div>
+            <h1><i data-feather="settings"></i> Settings</h1>
+            <div class="header-actions">
+                <button class="btn-secondary" id="logoutBtn2">
+                    <i data-feather="log-out"></i> Log Out
+                </button>
+            </div>
+        </header>
+
+        <div class="settings-content">
+            <section class="settings-section">
+                <div class="section-header">
+                    <h2><i data-feather="user"></i> User Profile</h2>
+                </div>
+                <div class="settings-card">
+                    <form id="profileForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="companyName">Company Name</label>
+                            <input type="text" id="companyName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="companyType">Business Type</label>
+                            <select id="companyType">
+                                <option value="retail">Retail</option>
+                                <option value="wholesale">Wholesale</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="restaurant">Restaurant</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Save</button>
+                        <button type="button" class="btn-danger" id="deleteAccountBtn" style="margin-top:10px;">
+                            <i data-feather="trash-2"></i> Delete Account
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <div class="section-header">
+                    <h2><i data-feather="database"></i> Data Management</h2>
+                </div>
+                <div class="settings-card">
+                    <div class="data-actions">
+                        <button class="btn-outline" id="exportAllData">
+                            <i data-feather="download"></i> Export All
+                        </button>
+                        <button class="btn-danger" id="resetAllData">
+                            <i data-feather="trash-2"></i> Reset All
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Sign In</h2>
+                <button class="close-btn" id="closeLogin">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn-primary full-width">Sign In</button>
+                <p class="form-footer">
+                    No account? <a href="#" id="switchToSignup">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal-overlay" id="signupModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Create Account</h2>
+                <button class="close-btn" id="closeSignup">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupCompanyName">Company Name *</label>
+                    <input type="text" id="signupCompanyName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupCompanyType">Business Type *</label>
+                    <select id="signupCompanyType" required>
+                        <option value="">Select</option>
+                        <option value="retail">Retail</option>
+                        <option value="wholesale">Wholesale</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="restaurant">Restaurant</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signupFirstName">First Name *</label>
+                        <input type="text" id="signupFirstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupLastName">Last Name *</label>
+                        <input type="text" id="signupLastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email *</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password *</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <button type="submit" class="btn-primary full-width">Create Account</button>
+                <p class="form-footer">
+                    Already have an account? <a href="#" id="switchToLogin">Sign In</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add Product</h2>
+                <button class="close-btn" id="closeModal">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="productName">Product Name *</label>
+                    <input type="text" id="productName" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="productCategory">Category *</label>
+                    <input type="text" id="productCategory" required>
+                    <span class="error-message" id="categoryError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="productQuantity">Quantity *</label>
+                    <input type="number" id="productQuantity" min="0" required>
+                    <span class="error-message" id="quantityError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Price *</label>
+                    <input type="number" id="productPrice" min="0" step="0.01" required>
+                    <span class="error-message" id="priceError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="minStockLevel">Minimum Stock</label>
+                    <input type="number" id="minStockLevel" min="0" value="5">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="btn-primary" id="saveBtn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Quick Edit Modal -->
+    <div class="modal-overlay" id="quickEditModal">
+        <div class="modal small">
+            <div class="modal-header">
+                <h2>Quick Edit</h2>
+                <button class="close-btn" id="closeQuickEdit">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="quick-edit-content">
+                <p>Product: <span id="quickEditProductName"></span></p>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" id="decreaseQty">
+                        <i data-feather="minus"></i>
+                    </button>
+                    <input type="number" id="quickEditQuantity" min="0">
+                    <button class="quantity-btn" id="increaseQty">
+                        <i data-feather="plus"></i>
+                    </button>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" id="cancelQuickEdit">Cancel</button>
+                    <button type="button" class="btn-primary" id="saveQuickEdit">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+    <script src="./Stock Pro JS/Logique.js"></script>
+</body>
+</html>
